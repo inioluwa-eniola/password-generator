@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to Favicon -->
+    <link rel="icon" src="images/icon.png" href="images/padlock.png">
+
+    <!-- Link to Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Link to CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Password Generator</title>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="main">
+            <div class="input-row">
+                <input type="text" id="password-display-input" class="password-display-input"></input>
+                <div class="reset-and-copy">
+                    <button class="reset-btn" id="reset-btn"><i class="fa-solid fa-rotate"></i>  </button>
+                    <button class="copy-btn" id="copy-btn" data-copy=".password-display-input"><i class="copy-icon fa-regular fa-copy"></i> <!-- <i class="fa-solid fa-check"></i> ---> </button>
+                </div>
+            </div>
+
+
+            <div class="strength-bar" id="strength-bar">
+                <div class="rule" id="rule">
+                    <hr id="bar">
+                </div>
+                <i class="fa-solid fa-shield shield-icon"></i>
+                <p class="strength" id="strength"></i>Strong</p>
+            </div>
+
+
+            <div class="control-section" id="control-section">
+
+                <div class="slider-wrapper" id="slider-wrapper">
+                    <p>Password Length</p>
+                    <p id="character-count"></p>
+                    <label><input type="range" name="slider" id="slider" class="slider" min="0" max="20" value="0" step="1"></label>
+                </div>
+                <div class="characters-wrapper" id="character-wrapper">
+                    <p class="characters-used" id="characters-used">Characters Used</p>
+                    <label><input type="checkbox" name="uppercase" id="uppercase" checked>Uppercase</label>
+                    <label><input type="checkbox" name="lowercase" id="lowercase" checked>Lowercase</label>
+                    <label><input type="checkbox" name="numbers" id="numbers" checked>Numbers</label>
+                    <label><input type="checkbox" name="symbols" id="symbols" checked>Symbols </label>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
